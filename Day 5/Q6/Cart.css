@@ -1,0 +1,40 @@
+.cart-container {
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.quantity-controls {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-controls button {
+  font-size: 1.5rem;
+  padding: 8px 18px;
+  margin: 0 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quantity-controls button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quantity-controls span {
+  font-size: 1.8rem;
+  width: 40px;
+  text-align: center;
+}
