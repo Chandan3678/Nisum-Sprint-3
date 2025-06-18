@@ -1,0 +1,46 @@
+.counter-container {
+  text-align: center;
+  margin-top: 40px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.increment {
+  background-color: #28a745; /* green */
+}
+
+.increment:hover {
+  background-color: #218838;
+}
+
+.decrement {
+  background-color: #dc3545; /* red */
+}
+
+.decrement:disabled {
+  background-color: #f5c6cb;
+  cursor: not-allowed;
+}
+
+.reset {
+  background-color: #007bff; /* blue */
+}
+
+.reset:hover {
+  background-color: #0069d9;
+}
