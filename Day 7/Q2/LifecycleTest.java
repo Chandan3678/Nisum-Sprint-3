@@ -14,4 +14,22 @@ public class LifecycleTest {
     }
 
     @Test
-    vo
+    void testOne() {
+        System.out.println("    >> @Test - testOne is running");
+    }
+
+    @Test
+    void testTwo() {
+        System.out.println("    >> @Test - testTwo is running");
+    }
+
+    @AfterEach
+    void afterEach() {
+        System.out.println("  > @AfterEach - Executes after each test method");
+    }
+
+    @AfterAll
+    void afterAll() {
+        System.out.println(">> @AfterAll - Executes once after all tests");
+    }
+}
