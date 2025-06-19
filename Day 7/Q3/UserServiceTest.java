@@ -1,21 +1,16 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class UserTest {
+public class UserServiceTest {
 
     @Test
-    void testUserProperties() {
-        User user = new User("John Doe", "john@example.com", 25);
+    void testValidateAgeThrowsException() {
+        UserService service = new UserService();
 
-        // Individual assertions
-        assertTrue(user.getAge() > 18);
-        assertNotNull(user.getEmail());
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            service.validateAge(16);
+        });
 
-        // Grouped assertion
-        assertAll("User Properties",
-            () -> assertEquals("John Doe", user.getName()),
-            () -> assertEquals("john@example.com", user.getEmail()),
-            () -> assertEquals(25, user.getAge())
-        );
+        assertEquals("Underage", exception.getMessage());
     }
 }
